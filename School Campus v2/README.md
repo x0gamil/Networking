@@ -1,5 +1,7 @@
 # Enterprise School Campus Network Project
 
+![Topology](topology.png)
+
 ## Overview
 
 This project simulates a real-world enterprise school campus network designed using Cisco Packet Tracer. The network follows the hierarchical enterprise architecture model consisting of Core, Distribution, and Access layers to provide scalability, redundancy, security, and simplified management.
