@@ -6,7 +6,7 @@
 
 ## 🖼️ Network Topology
 
-![Full Routing Protocol Topology](Full-Routing-Protocol-Topology.png)
+![Topology](topology.png)
 
 ---
 
