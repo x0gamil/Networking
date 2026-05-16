@@ -1,4 +1,4 @@
-# 🌐 Full Routing Protocolس Topology — Multi-Domain Enterprise Network
+# 🌐 Full Routing Protocols Topology — Multi-Domain Enterprise Network
 
 > A comprehensive Cisco Packet Tracer simulation of an enterprise-grade multi-protocol network, integrating OSPF (Multi-Area), EIGRP, and RIPv2 with full redistribution, VLAN segmentation, centralized DHCP, and Layer 2 security hardening.
 
