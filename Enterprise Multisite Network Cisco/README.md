@@ -1,4 +1,4 @@
-# 🌐 Full Routing Protocol Topology — Multi-Domain Enterprise Network
+# 🌐 Full Routing Protocolس Topology — Multi-Domain Enterprise Network
 
 > A comprehensive Cisco Packet Tracer simulation of an enterprise-grade multi-protocol network, integrating OSPF (Multi-Area), EIGRP, and RIPv2 with full redistribution, VLAN segmentation, centralized DHCP, and Layer 2 security hardening.
 
@@ -18,75 +18,6 @@ The topology spans **three routing domains** interconnected through **ASBR route
 
 ---
 
-Eigrp-R1#sh ip route
-Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
-       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
-       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
-       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
-       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
-       * - candidate default, U - per-user static route, o - ODR
-       P - periodic downloaded static route
-
-Gateway of last resort is not set
-
-     2.0.0.0/24 is subnetted, 1 subnets
-D EX    2.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     3.0.0.0/24 is subnetted, 1 subnets
-D EX    3.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     4.0.0.0/24 is subnetted, 1 subnets
-D EX    4.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     5.0.0.0/24 is subnetted, 1 subnets
-D EX    5.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     6.0.0.0/24 is subnetted, 1 subnets
-D EX    6.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     7.0.0.0/24 is subnetted, 1 subnets
-D EX    7.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     8.0.0.0/24 is subnetted, 1 subnets
-D EX    8.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     9.0.0.0/24 is subnetted, 1 subnets
-D EX    9.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     10.0.0.0/8 is variably subnetted, 21 subnets, 3 masks
-D EX    10.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.0/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.4/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.8/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.12/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.16/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.20/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.24/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.28/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.32/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.36/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.40/30 [170/2707456] via 10.0.1.61, 00:04:22, Serial0/0/0
-D EX    10.0.1.44/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.48/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D EX    10.0.1.52/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-D       10.0.1.56/30 [90/2681856] via 10.0.1.61, 00:04:23, Serial0/0/0
-C       10.0.1.60/30 is directly connected, Serial0/0/0
-L       10.0.1.62/32 is directly connected, Serial0/0/0
-C       10.0.1.64/30 is directly connected, Serial0/0/1
-L       10.0.1.66/32 is directly connected, Serial0/0/1
-D       10.0.1.68/30 [90/2681856] via 10.0.1.65, 00:04:26, Serial0/0/1
-                     [90/2681856] via 10.0.1.61, 00:04:25, Serial0/0/0
-     11.0.0.0/24 is subnetted, 1 subnets
-D EX    11.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     12.0.0.0/24 is subnetted, 1 subnets
-D EX    12.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     13.0.0.0/24 is subnetted, 1 subnets
-D EX    13.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     14.0.0.0/24 is subnetted, 1 subnets
-D EX    14.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     15.0.0.0/24 is subnetted, 1 subnets
-D EX    15.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     16.0.0.0/24 is subnetted, 1 subnets
-D EX    16.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
-     17.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
-C       17.0.0.0/24 is directly connected, GigabitEthernet0/0
-L       17.0.0.1/32 is directly connected, GigabitEthernet0/0
-
-Eigrp-R1#
-
----
 ## 🗺️ Topology Breakdown
 
 ### Routing Domains
@@ -222,6 +153,82 @@ Path: EIGRP Zone → ASBR2 → OSPF Area 1 → ASBR1 → RIPv2 Zone ✅
 Path: EIGRP Zone → ASBR2 → OSPF Area 1 → ABR → OSPF Area 0 ✅
 
 > Initial packet loss (25%) on first ping is expected — caused by ARP resolution on first transmission, not a routing issue.
+
+---
+
+## 🗂️ Routing Table Sample — EIGRP-R1
+
+Full routing table captured from `Eigrp-R1` confirming complete cross-domain reachability via redistribution:
+
+```
+Eigrp-R1#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+* - candidate default, U - per-user static route, o - ODR
+P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+2.0.0.0/24 is subnetted, 1 subnets
+D EX 2.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+3.0.0.0/24 is subnetted, 1 subnets
+D EX 3.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+4.0.0.0/24 is subnetted, 1 subnets
+D EX 4.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+5.0.0.0/24 is subnetted, 1 subnets
+D EX 5.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+6.0.0.0/24 is subnetted, 1 subnets
+D EX 6.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+7.0.0.0/24 is subnetted, 1 subnets
+D EX 7.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+8.0.0.0/24 is subnetted, 1 subnets
+D EX 8.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+9.0.0.0/24 is subnetted, 1 subnets
+D EX 9.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+10.0.0.0/8 is variably subnetted, 21 subnets, 3 masks
+D EX 10.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.0/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.4/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.8/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.12/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.16/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.20/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.24/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.28/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.32/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.36/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.40/30 [170/2707456] via 10.0.1.61, 00:04:22, Serial0/0/0
+D EX 10.0.1.44/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.48/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D EX 10.0.1.52/30 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+D    10.0.1.56/30 [90/2681856] via 10.0.1.61, 00:04:23, Serial0/0/0
+C    10.0.1.60/30 is directly connected, Serial0/0/0
+L    10.0.1.62/32 is directly connected, Serial0/0/0
+C    10.0.1.64/30 is directly connected, Serial0/0/1
+L    10.0.1.66/32 is directly connected, Serial0/0/1
+D    10.0.1.68/30 [90/2681856] via 10.0.1.65, 00:04:26, Serial0/0/1
+                  [90/2681856] via 10.0.1.61, 00:04:25, Serial0/0/0
+11.0.0.0/24 is subnetted, 1 subnets
+D EX 11.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+12.0.0.0/24 is subnetted, 1 subnets
+D EX 12.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+13.0.0.0/24 is subnetted, 1 subnets
+D EX 13.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+14.0.0.0/24 is subnetted, 1 subnets
+D EX 14.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+15.0.0.0/24 is subnetted, 1 subnets
+D EX 15.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+16.0.0.0/24 is subnetted, 1 subnets
+D EX 16.0.0.0/24 [170/2707456] via 10.0.1.61, 00:04:06, Serial0/0/0
+17.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C    17.0.0.0/24 is directly connected, GigabitEthernet0/0
+L    17.0.0.1/32 is directly connected, GigabitEthernet0/0
+```
+
+> **Key observation:** All external routes appear as `D EX` (EIGRP External) with AD=170, confirming successful redistribution from OSPF and RIPv2 domains into EIGRP via ASBR2. Internal EIGRP links (`10.0.1.56–68/30`) appear as native `D` routes with AD=90. Load balancing is also visible on `10.0.1.68/30` — learned via two equal-cost paths simultaneously.
 
 ---
 
