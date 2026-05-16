@@ -44,6 +44,26 @@ The topology spans **three routing domains** interconnected through **ASBR route
 
 ---
 
+## 📐 IP Addressing Strategy
+
+A deliberate and efficient IP addressing plan was applied across the entire topology:
+
+| Address Block | Purpose | Mask | Reason |
+|---|---|---|---|
+| `10.0.1.x` | All point-to-point links between routers | `/30` | Exactly 2 usable IPs — zero waste |
+| `x.0.0.0` (8, 9, 11, 12…) | LAN segments for end devices | `/24` | Simple, readable host ranges |
+| `6.0.0.0 / 7.0.0.0` | VLAN segments (OSPF Area 1) | `/24` | Per-VLAN isolation |
+| `15.0.0.0 / 16.0.0.0` | VLAN segments (OSPF Area 0) | `/24` | Per-VLAN isolation |
+| `12–14.0.0.0` | OSPF Area 0 LANs (dual-side) | `/24` | Symmetric design across switches |
+
+### Why /30 on every P2P link?
+
+A `/30` subnet provides exactly **4 IPs**: network address, 2 usable host IPs, and broadcast — perfect for a router-to-router link with no waste. Using `/24` instead would waste **252 IP addresses per link**. With **15+ point-to-point links** in this topology, the /30 strategy saves **3,700+ IP addresses** compared to a naive /24 design.
+
+All P2P links are grouped under the `10.0.1.0/24` block, making them instantly recognizable and easy to filter in routing tables and troubleshooting sessions.
+
+---
+
 ## ⚙️ Features & Implementation Details
 
 ### 🔁 Routing Protocols & Redistribution
@@ -159,7 +179,7 @@ Path: EIGRP Zone → ASBR2 → OSPF Area 1 → ABR → OSPF Area 0 ✅
 
 **Mohamed Gamil Ibrahim El-Gafarawy**
 Networking & Infrastructure Enthusiast | CCNA Track
-📞 01008995417
+📞 +201008995417
 > Built as a personal lab project to practice enterprise routing design and protocol interoperability.
 
 ---
