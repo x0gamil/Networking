@@ -7,7 +7,7 @@ This project demonstrates an enterprise-grade OSPF multi-area network design usi
 
 ## Topology
 
-![Topology](topology.png)
+![Topology](Topology.png)
 
 
 ## Project Objectives
