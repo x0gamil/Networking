@@ -4,6 +4,12 @@
 
 This project demonstrates an enterprise-grade OSPF multi-area network design using advanced routing concepts such as authentication, route redistribution, stub and totally stub areas, and virtual links. The topology simulates real-world ISP/enterprise scenarios focusing on scalability, security, and routing optimization.
 
+
+## Topology
+
+![Topology](topology.png)
+
+
 ## Project Objectives
 
 - Design scalable multi-area OSPF architecture
@@ -92,9 +98,6 @@ area 23 stub no-summary
 - Stub & Totally Stub Areas
 - Virtual Links
 
-## Topology
-
-![OSPF Multi-Area Lab](topology.png)
 
 ## Professional Summary
 
