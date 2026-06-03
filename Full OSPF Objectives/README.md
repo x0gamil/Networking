@@ -103,11 +103,13 @@ area 23 stub no-summary
 - Router 1
   
 ![Router1](R1.png)
+
 ---
 
 - Router 3
   
 ![Router3](R3.png)
+
 ---
 
 - Router 8
