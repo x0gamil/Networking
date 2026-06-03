@@ -4,11 +4,9 @@
 
 This project demonstrates an enterprise-grade OSPF multi-area network design using advanced routing concepts such as authentication, route redistribution, stub and totally stub areas, and virtual links. The topology simulates real-world ISP/enterprise scenarios focusing on scalability, security, and routing optimization.
 
-
 ## Topology
 
 ![Topology](Topology.png)
-
 
 ## Project Objectives
 
@@ -34,6 +32,8 @@ This project demonstrates an enterprise-grade OSPF multi-area network design usi
 ### Multi-Area OSPF Design
 Hierarchical OSPF design using Area 0 as backbone with multiple connected areas to improve scalability and routing efficiency.
 
+---
+
 ### Route Redistribution
 Static routes configured on R1 were redistributed into OSPF using **External Type 1 (E1)**:
 
@@ -42,51 +42,76 @@ Static routes configured on R1 were redistributed into OSPF using **External Typ
 - 172.31.2.0/24
 - 172.31.3.0/24
 
+---
+
 ### OSPF Authentication
-- **Type 1 (Plain Text Authentication)** used in Area 23
-- **Type 2 (MD5 Authentication)** used in backbone and virtual link
-- Ensures secure neighbor adjacency and prevents unauthorized routing updates
+
+This network implements **area-specific and link-specific authentication** for secure routing:
+
+#### Area 23 (Totally Stub Area)
+- Type: Plain Text Authentication (Type 1)
+- Key: 123
+
+#### Backbone Area 0
+- Type: MD5 Authentication (Type 2)
+- Key: 123
+
+#### Virtual Link (R6 ↔ R7)
+- Type: MD5 Authentication (Type 2)
+- Key: 123
+
+---
 
 ### Totally Stub Area (Area 23)
 Configured as:
-
 ```bash
 area 23 stub no-summary
 ```
 
 - Blocks Type 3, 4, and 5 LSAs
-- Only receives default route from ABR
+- Receives only default route from ABR
 - Reduces routing table size significantly
-- Optimized for low-resource or branch networks
+- Optimized for branch/low-resource networks
+
+---
 
 ### Stub Area (Area 45)
-- Configured as a standard stub area
+- Configured as standard stub area
 - Prevents external LSA flooding
 - Improves performance and reduces overhead
 
+---
+
 ### Virtual Link
 - Established between R6 and R7 via Area 67
-- Used to connect Area 78 to OSPF backbone (Area 0)
-- Ensures continuity in non-contiguous backbone design
+- Used to connect Area 78 to OSPF Backbone (Area 0)
+- MD5 authentication applied on virtual link for security
+- Ensures continuity of backbone connectivity in discontiguous design
+
+---
 
 ## Verification & Testing
 
 - OSPF neighbor adjacency establishment
 - Intra/inter-area routing validation
 - External route propagation (E1)
-- Default route injection in stub/totally stub areas
-- Authentication validation (MD5 & plain text)
+- Default route injection in stub and totally stub areas
+- Authentication validation across all OSPF domains
 - End-to-end connectivity testing
+
+---
 
 ## Skills Demonstrated
 
 - Advanced Cisco Routing (OSPF)
 - Enterprise Network Design
 - OSPF Area Types (Stub, Totally Stub)
+- Secure Network Design (OSPF Authentication)
 - Route Redistribution (E1 External Routes)
-- Network Security (OSPF Authentication)
 - Virtual Link Configuration
 - Network Troubleshooting & Validation
+
+---
 
 ## Technologies Used
 
@@ -98,10 +123,13 @@ area 23 stub no-summary
 - Stub & Totally Stub Areas
 - Virtual Links
 
+---
 
 ## Professional Summary
 
-Designed and implemented a secure and scalable enterprise OSPF multi-area network consisting of backbone, stub, and totally stub areas. Configured advanced routing features including authentication, route redistribution, and virtual links to simulate real-world enterprise routing scenarios. Verified full network convergence and optimized routing performance across all domains.
+Designed and implemented a secure and scalable enterprise OSPF multi-area network consisting of backbone, stub, and totally stub areas. Configured **area-specific authentication (Area 23, Area 0)** and **link-specific authentication (Virtual Link)** along with route redistribution and virtual links to simulate real-world enterprise routing scenarios. Verified full network convergence, security, and optimized routing performance across all domains.
+
+---
 
 ## About Me
 
