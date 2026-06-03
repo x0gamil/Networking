@@ -99,6 +99,12 @@ area 23 stub no-summary
 - Authentication validation across all OSPF domains
 - End-to-end connectivity testing
 
+![Router1](R1.png)
+
+![Router3](R3.png)
+
+![Router8](R8.png)
+
 ---
 
 ## Skills Demonstrated
